@@ -1,0 +1,36 @@
+
+<form action="/event" method="POST">
+  <div class="form-group">
+    <input type="text" class="form-control" name="name" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" name="address" placeholder="Address">
+  </div>
+  <input type="submit" class="btn btn-primary">
+</form>
+
+<div class="row">
+  <div class="col-md-6">
+    <h2>event</h2>
+    <% event.forEach(function(place) { %>
+      <div class="well">
+        <%= event.name %>
+      </div>
+    <% }); %>
+  </div>
+  <div class="col-md-6">
+    <h2>Map</h2>
+    <div id="map"></div>
+  </div>
+</div>
+
+
+<script>
+  var markers = <%- JSON.stringify(places) %>;
+</script>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr2pTOmH22vv8f6gv_zyPqPMgDLSet9k4&callback=initMap">
+</script>
+
+<script src="/js/script.js"></script>
