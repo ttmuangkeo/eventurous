@@ -1,29 +1,23 @@
-    <div class='container'>
-    	<hr>
-    	<h1 class='text-center'>EVENTUROUS</h1>
-</div>
 <div class='container'>
-<div class='row-fluid'>
-<div class='col-md-6'>
-<form action='/profile' method='GET' role=form>
-    	<legend>LOGIN</legend>
-		<div class='form-group'>
-		<label for='login'>Username</label>
-		<input type='text' class='form-control' id='login' name='Username' placeholder='Username'>
-		</div>
-	<div class='form-group'>
-		<label for='password'>Password</label>
-		<input type='password' class='form-control' id='password' name='password' placeholder='password'>
-	</div>
-<button type='submit' class='btn btn-primary btn-block'>Submit</button>
-</form>
+  <hr>
+	<h1 class='text-center'>EVENTUROUS</h1>
 </div>
 
-<div class='col-md-6'>
-		<p class='text-center'>Find new events to go to <strong>RIGHT</strong> now! <br> sign up today!</p>
-    	<a href="/signup" class='btn btn-primary btn-block'>Sign Up</a>
-    	
-    	</div>
-    	</div>
-    </div>
+<div class='container'>
+	<div class='row'>
+		<div class='col-md-6'>
+			<form action='/auth/login' method='GET' role=form>
+		    	<legend>LOGIN</legend>
+					<button type='submit' class='btn btn-primary btn-block'>Login</button>
+			</form>
+		</div>
+
+	<div class='col-md-6'>
+		<form action='/auth/signup' method='GET' role=form>
+			<legend>SIGN UP</legend>
+				<button type='submit' class=' btn btn-primary btn-block'>Sign up</button>
+		</form>
+	</div>
+
+	</div>
 </div>

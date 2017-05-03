@@ -1,6 +1,6 @@
-<h1>new user</h1>
-
-<form action="/signup" method="POST" role="form">
+<h1 class='text-center'>new user</h1>
+<div class='container'>
+<form action="/auth/signup" method="POST" role="form">
 <legend>new user</legend>
 
 <div class='form-group'>
@@ -10,7 +10,7 @@
 
 <div class='form-group'>
 	<label for="password"> Password</label>
-	<input type="text" class='form-control' id='password' name='password' placeholder="enter your password">
+	<input type="password" class='form-control' id='password' name='password' placeholder="enter your password">
 </div>
 
 <div class='form-group'>
@@ -26,3 +26,7 @@
 <button type='submit' class='btn btn-primary'>Submit</button>
 
 </form>
+
+	
+<a href="/auth/facebook" class="btn btn-primary">Sign up with Facebook</a>
+</div>
