@@ -1,23 +1,44 @@
 <div class='container'>
-  <hr>
+	<hr>
 	<h1 class='text-center'>EVENTUROUS</h1>
 </div>
 
-<div class='container'>
+<div class='container-fluid'>
 	<div class='row'>
+		<div class="homepage-hero-module">
+			<div class="video-container">
+				<div class="filter"></div>
+				<video autoplay loop class="fillWidth">
+					<source src="/video/flow.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+					<source src="/video/flow.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+				</video>
+				<div class="poster hidden">
+					<img src="/video/flow.jpg" alt="">
+				</div>
+			</div>
+		</div>
 		<div class='col-md-6'>
 			<form action='/auth/login' method='GET' role=form>
-		    	<legend>LOGIN</legend>
-					<button type='submit' class='btn btn-primary btn-block'>Login</button>
+				<legend>LOGIN</legend>
+				<button type='submit' class='btn btn-primary btn-block'>Login</button>
+			</form>
+		</div>
+		<div class='col-md-6'>
+			<form action='/auth/signup' method='GET' role=form>
+				<legend>SIGN UP</legend>
+				<button type='submit' class=' btn btn-primary btn-block'>Sign up</button>
 			</form>
 		</div>
 
-	<div class='col-md-6'>
-		<form action='/auth/signup' method='GET' role=form>
-			<legend>SIGN UP</legend>
-				<button type='submit' class=' btn btn-primary btn-block'>Sign up</button>
-		</form>
 	</div>
 
-	</div>
+	
 </div>
+</div>
+
+
+
+
+
+
+
