@@ -1,30 +1,18 @@
+<h1 class='text-center'> profile </h1>
+
 <div class='container-fluid'>
 	<div class='row'>
-		<h1 class='text-center'>page</h1>
 		<div class='col-md-3'>
-			<h2>bio</h2>
-			<div class='row'>
-				<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTez7mpG_Lfb01PnEMjHa4gYPOx7iNTab4KKVnVCdNSGpa1O2RJ" alt="" class='img-circle img-responsive'>
-			</div>
-			<label for="description">description</label>
+			<h4>user's profile</h4>
+			<p>picture will go here</p>
+			<p>bio</p>
 		</div>
-
-		<div class='row'>
-	<div class='col-md-3'>
-			<h2>EVENTS</h2>
-			<%events.forEach(function(events) {%>
-			<div class='well'>
-				<%= events.name%>
-				
-				<%= events.description%>
-				
-				<%= events.address %>
-				</div>
-			<%})%>
-		</div>
-		</div>
-
-		<a href="/auth/logout" class='btn btn-lg'>log out</a>
+	</div>
+</div>
 
 
 
+
+
+
+<a href="/auth/logout" class='btn btn-lg'>log out</a>

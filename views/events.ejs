@@ -1,38 +1,42 @@
 <h1 class='text-center'>EVENTS</h1>
 
-
-
 <div class='container-fluid'>
 	<div class='row'>
-		<h1 class='text-center'>Recent Events</h1>
-		<div class='col-md-3'>
-			<h2>Event description</h2>
-			<%events.forEach(function(events) {%>
-			<div class='well'>
-
-			<div class='eventName'>
-			<%= events.name %>
-			</div>
-
-			<div class='eventDescription'>
-			<%= events.description %>
-			<%= events.address %>
-			</div>
-		</div>
-			
-			<%})%>
-		</div>
 		<div class='col-md-9'>
 			<div id='map'></div>
 		</div>
+		<div class='row'>
+			<div class='col-md-3'>
+				<h2>events</h2>
+				<%events.forEach(function(events) {%>
+				<div class='card' style='width: 20rem;'>
+				<img class='card-img-top' src='https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=200&h=180' alt="Card image cap">
+					<div class='card-block'>
+						<div class='eventName'>
+							<h4><%= events.name %></h4>
+						</div>
+						<div class='eventDescription'>
+							<p><%= events.description %>
+								<%= events.address %>
+							</p>
+						</div>
+					</div>
+				</div>
 
+
+				<%})%>
+
+			</div>
+		</div>
+	</div>
+</div>
 
 <script>
 	var markers = <%-JSON.stringify(events) %>
 </script>
 
-		<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr2pTOmH22vv8f6gv_zyPqPMgDLSet9k4&callback=initMap">
-	</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr2pTOmH22vv8f6gv_zyPqPMgDLSet9k4&callback=initMap">
+</script>
 
-	<script src="/script.js"></script>
+<script src="/script.js"></script>

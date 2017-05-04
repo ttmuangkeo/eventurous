@@ -8,6 +8,9 @@ var flash = require('connect-flash');
 var passport = require('./config/passportConfig');
 var isLoggedin = require('./middleware/isLoggedin');
 var db = require('./models');
+var multer = require('multer');
+var upload = multer({ dest: './uploads/' });
+var cloudinary = require('cloudinary');
 
 var app = express();
 
@@ -84,6 +87,18 @@ app.post('/profile', isLoggedin, function(req, res) {
         res.redirect('/profile');
     });
 });
+
+
+
+
+
+app.post('/profile', upload.single('myFile'), function(req, res) {
+    cloudinary.uploader.upload(req.file.path, function(result) {
+        res.send(result);
+    });
+});
+
+cloudinary.image('sample.jpg');
 
 //controllers
 //TO DO: auth controller
