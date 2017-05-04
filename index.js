@@ -107,6 +107,4 @@ app.use('/auth', require('./controllers/auth'));
 
 
 //listen
-
-
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
