@@ -12,9 +12,6 @@
         "dialect": "postgres"
     },
     "production": {
-        "username": "postgres_production",
-        "database": "eventurous",
-        "host": "127.0.0.1",
-        "dialect": "postgres"
+        "user_evn_variable": "DATABASE_URL"
     }
 }
