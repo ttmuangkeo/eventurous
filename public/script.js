@@ -26,11 +26,14 @@ var initMap = function() {
             map: map
         });
         // Bind a popup to the marker
-        googleMarker.addListener('click', function() {
+        googleMarker.addListener('mouseover', function() {
             var infoWindow = new google.maps.InfoWindow({
                 content: '<h3>' + marker.name + '</h3>'
             });
             infoWindow.open(map, googleMarker);
-        });
+            googleMarker.addListener('mouseout', function() {
+                infoWindow.close();
+            });
+        })
     });
 };

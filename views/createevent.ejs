@@ -1,10 +1,13 @@
 <h1 class='text-center'>create an event</h1>
-<div class="container">
+<div class="container-fluid">
 	<div class='row'>
-		<div class='col-md-4 col-md-offset-4'>
-			<form action='/events' method='POST'>
+		<div class='col-md-12'>
+			<form action='/profile' method='POST'>
 				<div class="form-group">
 					<input type="text" class="form-control" name="name" placeholder="Name">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" name="description" placeholder="Description">
 				</div>
 				<div class="form-group">
 					<input type="text" class="form-control" name="address" placeholder="Address">
@@ -15,21 +18,22 @@
 	</div>
 </div>
 
-
+<br>
 <div class='container-fluid'>
 	<div class='row'>
-		<h1 class='text-center'>Profile page</h1>
-		<div class='col-md-3'>
-			<h2>EVENTS</h2>
-			<p>Events description displayed here if clicked on pin</p>
-			<p>Other possible information displayed here</p>
-		</div>
+
+
+
 		<div class='col-md-9'>
+		<div class='bg-primary'>
 			<div id='map'></div>
 		</div>
+		</div>
 
 
-
+		<script>
+			var markers = <%-JSON.stringify(events) %>
+		</script>
 
 		<script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr2pTOmH22vv8f6gv_zyPqPMgDLSet9k4&callback=initMap">

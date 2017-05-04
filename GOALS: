@@ -1,0 +1,38 @@
+GOALS:
+
+when a user logs in, nav bar is revealed*
+
+event page is always revealed*
+
+make everything responsive*
+
+HOME PAGE
+	-description about what the web app does
+	-style
+	-sizing
+
+CREATE PAGE
+	-
+	-
+
+
+PROFILE PAGE
+create edit profile 
+	-bio
+	-profile picture
+allow user to upload images
+	-cloudinary
+events will be carousel
+
+
+EVENT PAGE
+change the event(class=well) to (class=cards)
+
+
+
+
+
+
+style 
+	- css/bootstrap
+	-responsive

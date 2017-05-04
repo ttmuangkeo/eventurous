@@ -7,6 +7,7 @@ var session = require('express-session');
 var flash = require('connect-flash');
 var passport = require('./config/passportConfig');
 var isLoggedin = require('./middleware/isLoggedin');
+var db = require('./models');
 
 var app = express();
 
@@ -36,19 +37,53 @@ app.get('/', function(req, res) {
     res.render('home');
 });
 
-app.get('/profile', isLoggedin, function(req, res) {
-    res.render('profile');
-});
+
+app.get('/events',
+    function(req, res) {
+        db.event.findAll().then(function(events) {
+            res.render('events', { events: events });
+        }).catch(function(error) {
+            res.send({ message: 'error', error: error });
+        });
+    });
 
 app.get('/createevent', function(req, res) {
-    res.render('createevent');
+    db.event.findAll().then(function(events) {
+        res.render('createevent', { events: events });
+    }).catch(function(error) {
+        res.send({ message: 'error', error: error });
+    });
 });
 
-app.get('/events', function(req, res) {
-    res.render('events');
+app.post('/events', isLoggedin, function(req, res) {
+    db.event.create({
+        name: req.body.name,
+        description: req.body.description,
+        address: req.body.address,
+        userId: req.user.id
+    }).then(function(event) {
+        res.redirect('/events');
+    });
 });
 
+app.get('/profile', function(req, res) {
+    db.event.findAll().then(function(events) {
+        res.render('profile', { events: events });
+    }).catch(function(error) {
+        res.send({ message: 'error', error: error })
+    });
+});
 
+app.post('/profile', isLoggedin, function(req, res) {
+    db.event.create({
+        name: req.body.name,
+        description: req.body.description,
+        address: req.body.address,
+        userId: req.user.id
+    }).then(function(event) {
+        res.redirect('/profile');
+    });
+});
 
 //controllers
 //TO DO: auth controller

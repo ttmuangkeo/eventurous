@@ -1,4 +1,19 @@
 #map {
     height: 500px;
-    color: red;
+}
+
+.eventName {
+    font-size: 15pt;
+}
+
+.eventDescription {
+    display: none;
+}
+
+.eventName:hover + .eventDescription {
+    display: block;
+}
+
+body {
+    background-color: rgb(73, 65, 64);
 }

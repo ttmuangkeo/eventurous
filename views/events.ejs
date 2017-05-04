@@ -7,13 +7,29 @@
 		<h1 class='text-center'>Recent Events</h1>
 		<div class='col-md-3'>
 			<h2>Event description</h2>
-			<p>Events description displayed here if clicked on pin</p>
-			<p>if the user creates an event.</p> 
-			<p> --res.render-- to this page</p>
+			<%events.forEach(function(events) {%>
+			<div class='well'>
+
+			<div class='eventName'>
+			<%= events.name %>
+			</div>
+
+			<div class='eventDescription'>
+			<%= events.description %>
+			<%= events.address %>
+			</div>
+		</div>
+			
+			<%})%>
 		</div>
 		<div class='col-md-9'>
 			<div id='map'></div>
 		</div>
+
+
+<script>
+	var markers = <%-JSON.stringify(events) %>
+</script>
 
 		<script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr2pTOmH22vv8f6gv_zyPqPMgDLSet9k4&callback=initMap">
