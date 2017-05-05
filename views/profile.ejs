@@ -4,19 +4,29 @@
 	<div class='row'>
 		<div class='col-md-3'>
 			<h4>user's profile</h4>
-			<p>picture will go here</p>
+							<img class='card-img-top' src='https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=200&h=180' alt="Card image cap">
+
 			<p>bio</p>
 		</div>
 		<div class='col-md-9'>
 			<h2>users created events</h2>
 			<%events.forEach(function(events) {%>
 			<div class='card' style='width: 20rem;'>
-				<img class='card-img-top' src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=200&h=180'" alt="Card image cap">
+
+
+				<img class='card-img-top' src='https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=200&h=180'>
 				<div class='card-block'>
+
+				
 					<div class='eventName'>
-					<h4><%= events.name%></h4>
+						<h4><%= events.name%></h4>
 					</div>
-					
+					<div class='eventDescription'>
+						<p><%=events.description%>
+							<br>
+							<%=events.address %>
+						</p>
+					</div>
 				</div>
 			</div>
 			<%})%>

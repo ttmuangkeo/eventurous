@@ -4,6 +4,7 @@ var geocoder = require('geocoder');
 module.exports = function(sequelize, DataTypes) {
     var event = sequelize.define('event', {
         name: DataTypes.STRING,
+        userId: DataTypes.INTEGER,
         description: DataTypes.STRING,
         address: DataTypes.STRING,
         lat: DataTypes.FLOAT,
@@ -12,8 +13,7 @@ module.exports = function(sequelize, DataTypes) {
         classMethods: {
             associate: function(models) {
                 // associations can be defined here
-                // models.event.belongsToMany(models.user, { through: models.event_user });
-
+                models.event.belongsTo(models.user);
             }
         },
         hooks: {

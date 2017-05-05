@@ -41,14 +41,15 @@ app.get('/', function(req, res) {
 });
 
 
-app.get('/events',
-    function(req, res) {
-        db.event.findAll().then(function(events) {
-            res.render('events', { events: events });
-        }).catch(function(error) {
-            res.send({ message: 'error', error: error });
-        });
+
+
+app.get('/events', function(req, res) {
+    db.event.findAll().then(function(events) {
+        res.render('events', { events: events });
+    }).catch(function(error) {
+        res.send({ message: 'error', error: error });
     });
+});
 
 app.get('/createevent', function(req, res) {
     db.event.findAll().then(function(events) {
@@ -89,16 +90,6 @@ app.post('/profile', isLoggedin, function(req, res) {
 });
 
 
-
-
-
-app.post('/profile', upload.single('myFile'), function(req, res) {
-    cloudinary.uploader.upload(req.file.path, function(result) {
-        res.send(result);
-    });
-});
-
-cloudinary.image('sample.jpg');
 
 //controllers
 //TO DO: auth controller

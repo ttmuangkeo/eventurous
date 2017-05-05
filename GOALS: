@@ -1,5 +1,7 @@
 GOALS:
 
+debug - linking M:M 
+
 when a user logs in, nav bar is revealed*
 
 event page is always revealed*
@@ -26,7 +28,7 @@ events will be carousel
 
 
 EVENT PAGE
-change the event(class=well) to (class=cards)
+
 
 
 

@@ -30,9 +30,9 @@ router.post('/signup', function(req, res, next) {
     db.user.findOrCreate({
         where: { email: req.body.email },
         defaults: {
-            'firstname': req.body.firstName,
-            'lastname': req.body.lastName,
-            "password": req.body.password
+            'firstName': req.body.firstName,
+            'lastName': req.body.lastName,
+            'password': req.body.password
         }
     }).spread(function(user, wasCreated) {
         if (wasCreated) {
@@ -97,7 +97,7 @@ router.post('/events', function(req, res) {
     }).then(function(event) {
         res.redirect('events');
     }).catch(function(err) {
-        res.send({ message: 'error', error:err});
+        res.send({ message: 'error', error: err });
     });
 });
 
