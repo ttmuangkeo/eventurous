@@ -105,33 +105,29 @@ app.post('/profile', isLoggedin, function(req, res) {
 
 
 
-app.get('/edit', isLoggedin, function(req, res) {
+app.get('/profile', isLoggedin, function(req, res) {
     db.user.findById(req.user.id).then(function(user) {
-        res.render('edit', { user: user });
+        res.render('profile', { user: user });
     });
 });
 
-app.post('/edit', upload.single('myFile'), function(req, res) {
+app.post('/profile', upload.single('myFile'), function(req, res) {
     cloudinary.uploader.upload(req.file.path, function(result) {
         console.log('==============', result)
-
         db.user.update({
-                avatar: result.public_id
-            }, {
-                where: { id: req.user.id }
-            }).then(function(user) {
-                res.redirect('profile');
-            })
-            // db.user.create({
-            //     avatar: result.public_id
-            // }).then(function(edit) {
-            // })
+            avatar: result.public_id
+        }, {
+            where: { id: req.user.id }
+        }).then(function(user) {
+            console.log(user)
+            res.redirect('/profile');
+        });
     });
 });
 
-app.get('/edit', function(req, res) {
+app.get('/profile', function(req, res) {
     db.event.findAll().then(function(users) {
-        res.render('edit', { users: users });
+        res.render('profile', { users: users });
     }).catch(function(error) {
         res.send({ message: 'error', error: error })
     });

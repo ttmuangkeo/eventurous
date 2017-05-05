@@ -14,9 +14,12 @@
     display: block;
 }
 
+.card {
+    display: inline-block;
+}
+
 .bg-primary,
 .btn {
     /*background-color: rgba(245, 245, 245, 0.4);
 */
-
 }
