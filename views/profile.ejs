@@ -3,21 +3,40 @@
 <div class='container-fluid'>
 	<div class='row'>
 		<div class='col-md-3'>
-			<h4>user's profile</h4>
-							<img class='card-img-top' src='https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=200&h=180' alt="Card image cap">
+			<h4> profile</h4>
 
-			<p>bio</p>
+				<img class='card-img-top' src='https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=200&h=180'>
+			<a href="/edit">edit page</a>
+
+
+
+
+
+			<form action="/edit" method="POST" enctype="multipart/form-data">
+				<label class="btn btn-default btn-file">
+					Upload File <input type="file" name="myFile" class="hidden">
+				</label>
+				<input type="submit" class="btn btn-primary">
+			</form>
+
+
+
+
+			<p> bio</p>
+			
+
 		</div>
 		<div class='col-md-9'>
 			<h2>users created events</h2>
 			<%events.forEach(function(events) {%>
+
 			<div class='card' style='width: 20rem;'>
 
 
 				<img class='card-img-top' src='https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=200&h=180'>
 				<div class='card-block'>
 
-				
+
 					<div class='eventName'>
 						<h4><%= events.name%></h4>
 					</div>

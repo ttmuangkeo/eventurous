@@ -70,8 +70,10 @@ app.post('/events', isLoggedin, function(req, res) {
     });
 });
 
-app.get('/profile', function(req, res) {
-    db.event.findAll().then(function(events) {
+app.get('/profile', isLoggedin, function(req, res) {
+    db.event.findAll({
+        where: { userId: req.user.id }
+    }).then(function(events) {
         res.render('profile', { events: events });
     }).catch(function(error) {
         res.send({ message: 'error', error: error })
@@ -88,6 +90,55 @@ app.post('/profile', isLoggedin, function(req, res) {
         res.redirect('/profile');
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.get('/edit', isLoggedin, function(req, res) {
+    db.user.findById(req.user.id).then(function(user) {
+        res.render('edit', { user: user });
+    });
+});
+
+app.post('/edit', upload.single('myFile'), function(req, res) {
+    cloudinary.uploader.upload(req.file.path, function(result) {
+        console.log('==============', result)
+
+        db.user.update({
+                avatar: result.public_id
+            }, {
+                where: { id: req.user.id }
+            }).then(function(user) {
+                res.redirect('profile');
+            })
+            // db.user.create({
+            //     avatar: result.public_id
+            // }).then(function(edit) {
+            // })
+    });
+});
+
+app.get('/edit', function(req, res) {
+    db.event.findAll().then(function(users) {
+        res.render('edit', { users: users });
+    }).catch(function(error) {
+        res.send({ message: 'error', error: error })
+    });
+});
+
+
+
 
 
 

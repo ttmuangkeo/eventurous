@@ -1,3 +1,4 @@
+/* globals google, markers */
 var initMap = function() {
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -34,6 +35,6 @@ var initMap = function() {
             googleMarker.addListener('mouseout', function() {
                 infoWindow.close();
             });
-        })
+        });
     });
 };
