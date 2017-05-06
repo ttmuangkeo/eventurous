@@ -1,24 +1,32 @@
-<h1 class='text-center'><%= currentUser.firstName%> profile </h1>
+<ol class="breadcrumb text-center">
+  <li><a href="/">Home</a></li>
+  <li><a href="/createevent">Create Event</a></li>
+  <li><a href="/events">Events</a></li>
+  <li><a href="/profile">Profile</a></li>
+</ol>
+
+
+<h1 class='text-center'><%=currentUser.firstName%> profile </h1>
 
 <div class='container-fluid'>
 	<div class='row'>
 		<div class='col-md-3'>
-			<h4> <%= currentUser.firstName%> profile</h4>
+			<h4><%=currentUser.firstName%>  profile</h4>
+<img src='https://res.cloudinary.com/ttmuangkeo/image/upload/g_face,c_thumb,w_150,h_150/<%=currentUser.avatar%>.jpg' alt="">
 
 
-			<form action="/profile" method="POST" enctype="multipart/form-data">
+			<form action="/edit" method="POST" enctype="multipart/form-data">
 				<label class="btn btn-default btn-file">
 					Upload File <input type="file" name="myFile" class="hidden">
 				</label>
 				<input type="submit" class="btn btn-primary">
 			</form>
-
-
-			<img src='https://res.cloudinary.com/ttmuangkeo/image/upload/v1494004612/<%=currentUser.avatar%>.jpg' alt="">
 			
 		</div>
+
+
 		<div class='col-md-9'>
-			<h2><%= currentUser.firstName%> created events</h2>
+			<h2><%=currentUser.firstName%> created events</h2>
 			<%events.forEach(function(events) {%>
 
 			<div class='card' style='width: 20rem;'>

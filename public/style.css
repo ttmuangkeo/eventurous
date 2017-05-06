@@ -6,20 +6,16 @@
     font-size: 15pt;
 }
 
-.eventDescription {
-    display: none;
+.homebtn {
+    background-color: rgba(245, 245, 245, 0.4);
 }
 
-.eventName:hover + .eventDescription {
-    display: block;
+body.bgevent {
+    background: url(/video/bgevent.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
 }
 
-.card {
-    display: inline-block;
-}
-
-.bg-primary,
-.btn {
-    /*background-color: rgba(245, 245, 245, 0.4);
-*/
+body.createbg {
+    background: url(/video/createbg.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
 }

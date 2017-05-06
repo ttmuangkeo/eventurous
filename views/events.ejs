@@ -1,43 +1,53 @@
-<h1 class='text-center'>EVENTS</h1>
+<body class='bgevent'>
+	
 
-<div class='container-fluid'>
-	<div class='row'>
-		<div class='col-md-9'>
-			<div id='map'></div>
-		</div>
+<ol class="breadcrumb text-center">
+  <li><a href="/">Home</a></li>
+  <li><a href="/createevent">Create Event</a></li>
+  <li><a href="/events">Events</a></li>
+  <li><a href="/profile">Profile</a></li>
+</ol>
+
+
+<div class='container'>
+	<div class='row-fluid'>
 		<div class='row'>
-			<div class='col-md-3'>
-				<h2>events</h2>
-				
+
+			<div class='col-md-12'>
 				<%events.forEach(function(events) {%>
-				<div class='card' style='width: 20rem;'>
-				
-				<img class='card-img-top' src=http://maps.googleapis.com/maps/api/staticmap?center=<%=events.lat%>,<%=events.lng%>&zoom=13&size=200x180 alt="Card image cap">
+				<div class='card'>
+
+					<img class='card-img-top' src=http://maps.googleapis.com/maps/api/staticmap?center=<%=events.lat%>,<%=events.lng%>&zoom=13&size=200x180 alt="Card image cap">
 					<div class='card-block'>
 						<div class='eventName'>
 							<h4><%= events.name %></h4>
-						</div>
-						<div class='eventDescription'>
+						
 							<p><%= events.description %>
 								<%= events.address %>
 							</p>
 						</div>
+						</div>
+					
 					</div>
 				</div>
-
 				<%})%>
-
 			</div>
 		</div>
 	</div>
-</div>
 
-<script>
-	var markers = <%-JSON.stringify(events) %>
-</script>
+		<div class='col-md-12'>
+			<div id='map'></div>
+		</div>
+	<script>
+		var markers = <%-JSON.stringify(events) %>
+	</script>
 
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr2pTOmH22vv8f6gv_zyPqPMgDLSet9k4&callback=initMap">
+	<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr2pTOmH22vv8f6gv_zyPqPMgDLSet9k4&callback=initMap">
 </script>
 
 <script src="/script.js"></script>
+<link rel="stylesheet" href="/style">
+
+
+</body
