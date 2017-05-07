@@ -1,8 +1,9 @@
 <ol class="breadcrumb text-center">
-  <li><a href="/">Home</a></li>
-  <li><a href="/createevent">Create Event</a></li>
-  <li><a href="/events">Events</a></li>
-  <li><a href="/profile">Profile</a></li>
+	<li><a href="/">Home</a></li>
+	<li><a href="/createevent">Create Event</a></li>
+	<li><a href="/events">Events</a></li>
+	<li><a href="/profile">Profile</a></li>
+	<li><a href="/auth/logout">log out</a></li>
 </ol>
 
 
@@ -12,47 +13,44 @@
 	<div class='row'>
 		<div class='col-md-3'>
 			<h4><%=currentUser.firstName%>  profile</h4>
-<img src='https://res.cloudinary.com/ttmuangkeo/image/upload/g_face,c_thumb,w_150,h_150/<%=currentUser.avatar%>.jpg' alt="">
+			<img src='https://res.cloudinary.com/ttmuangkeo/image/upload/g_face,c_thumb,w_150,h_150/<%=currentUser.avatar%>.jpg' alt="">
 
 
 			<form action="/edit" method="POST" enctype="multipart/form-data">
 				<label class="btn btn-default btn-file">
-					Upload File <input type="file" name="myFile" class="hidden">
+					Choose Display Picture <input type="file" name="myFile" class="hidden">
 				</label>
 				<input type="submit" class="btn btn-primary">
 			</form>
-			
 		</div>
 
 
-		<div class='col-md-9'>
-			<h2><%=currentUser.firstName%> created events</h2>
-			<%events.forEach(function(events) {%>
 
-			<div class='card' style='width: 20rem;'>
+		<div class='container-fluid'>
+			<div class='row'>
+				<div class='col-md-3 eventpage'>
+					<h1>Events</h1>
+					<div class='card carousel-item'>
+						<%events.forEach(function(events) {%>
+						<img class='card-img-top' src="http://maps.googleapis.com/maps/api/staticmap?center=<%=events.lat%>,<%=events.lng%>&zoom=13&size=200x180">
 
-			<img class='card-img-top' src=http://maps.googleapis.com/maps/api/staticmap?center=<%=events.lat%>,<%=events.lng%>&zoom=13&size=200x180 alt="Card image cap">
-				<div class='card-block'>
+						<div class='card-block'>
 
-					<div class='eventName'>
-						<h4><%= events.name%></h4>
-					</div>
-					<div class='eventDescription'>
-						<p><%=events.description%>
-							<br>
-							<%=events.address %>
-						</p>
+							<h4><%=events.name%></h4>
+							<p><%=events.description%></p>
+							<p><%=events.address%></p>
+
+						</div>
+						<%})%>
+
 					</div>
 				</div>
 			</div>
-			<%})%>
 		</div>
-	</div>
-</div>
 
 
 
+		
 
 
 
-<a href="/auth/logout" class='btn btn-lg'>log out</a>

@@ -1,3 +1,7 @@
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
 #map {
     height: 500px;
 }
@@ -7,15 +11,31 @@
 }
 
 .homebtn {
-    background-color: rgba(245, 245, 245, 0.4);
+    background-color: rgba(245, 245, 245, 0.5);
+    height: 100%;
+    width: 100%;
 }
 
-body.bgevent {
-    background: url(/video/bgevent.jpg) no-repeat center center fixed;
-    background-size: 100% 100%;
+.loginbg {
+    background-image: url(/video/loginbg.jpg);
 }
 
-body.createbg {
-    background: url(/video/createbg.jpg) no-repeat center center fixed;
-    background-size: 100% 100%;
+.eventpage {
+    background-color: oldlace;
+    height: 480px;
+    overflow: scroll;
+    direction: ltr;
+}
+
+.breadcrumb {
+    font-weight: bold;
+    background-color: oldlace;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    height: 0px;
+    clear: both;
 }

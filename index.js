@@ -91,20 +91,6 @@ app.post('/profile', isLoggedin, function(req, res) {
     });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 app.get('/edit', isLoggedin, function(req, res) {
     db.user.findById(req.user.id).then(function(user) {
         res.render('edit', { user: user });
