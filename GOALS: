@@ -44,3 +44,80 @@ EVENT PAGE
 style 
 	- css/bootstrap
 	-responsive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	SUMMARY
+	A web application where users can see spontaneous events. 
+	You can open the application and see events happening at any time of the day
+	I always found myself bored with nothing to do to around town.
+	I did not want to go to scheduled events.
+	I did not want to join meet ups or clubs. 
+	I wanted to go to events to kill time for a couple hours or even minutes.
+	Great for people who want events to go to without a plan
+
+
+	EXAMPLE
+	celebrity walking around downtown.
+	exotic cars driving around
+	a fight at a bar
+	wierd out of the ordinary things 
+
+
+
+
+	DEMO
+	sign up
+	profile
+	upload image
+	create an event
+	see the event on the events page
+	log out
+
+
+	WHAT AM I MOST PROUD OF
+	Having the user create a profile where they can upload a profile picture. Also when they create an event. it automatically saves to their profile. Multiple users.
+
+
+	THE MOST CHALLENGING
+	Calling the cloudinary API. I could not get the user to upload images and have it display on the profile page. 
+	I found out that I needed to do currentUser.avatar instead of user.avatar
+
+	fixing errors to my database. when I did my create routes I forgot to call my users.id for creating events.
+
+
+	IF I HAD ANOTHER WEEK
+	implement an edit button to edit the user's bio.
+
+	add a delete button to delete the user's events on their profile.
+	or
+	have events auto delete itself after the end of the day or within the user's given time.
+
+	instead of the google static image. I would rather have it be a streetview of the location or have the user upload their own pictures.
+
+	add a carousel to display the users created events instead of a scroll box
+
+	add another api (meetup, foursquare)
+
+	style more
+
+
+
+
+
