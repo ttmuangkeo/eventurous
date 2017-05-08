@@ -124,6 +124,34 @@ app.get('/edit', function(req, res) {
 });
 
 
+app.put('/profile', function(req, res) {
+    db.event.findById(req.params.id).then(function(event) {
+        if (event) {
+            event.updateAttributes(req.body).then(function() {
+                res.send({ message: 'success' });
+            });
+        } else {
+            res.status(404).send({ message: 'error' });
+        }
+    }).catch(function(error) {
+        res.status(500).send({ message: 'error' });
+    });
+});
+
+app.delete('/profile', function(req, res) {
+    db.event.findById(req.params.id).then(function(event) {
+        if (event) {
+            event.destroy().then(function() {
+                res.send({ message: 'success' });
+            });
+        } else {
+            res.status(404).send({ message: 'error' });
+        }
+    }).catch(function(error) {
+        res.status(500).send({ message: 'error' });
+    });
+});
+
 
 
 
