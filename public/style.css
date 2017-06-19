@@ -1,19 +1,46 @@
 * {
     font-family: 'Kanit', sans-serif;
 }
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
 
-#map {
+.Absolute-Center.is-Responsive {
+  width: 50%; 
+  height: 50%;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 40px;
+}
+
+#map-container {
     height: 500px;
 }
 
+#logo {
+    letter-spacing: 7px;
+    font-size: 23pt;
+}
+pre {
+  height: 50px;
+}
+
+
 .eventName {
     font-size: 15pt;
+}
+
+#createbg {
+  background-color: rgba(32, 134, 255, 0.5);
 }
 
 .homebtn {
     background-color: rgba(245, 245, 245, 0.5);
     height: 100%;
     width: 100%;
+
 }
 
 .loginbg {
@@ -21,7 +48,7 @@
 }
 
 .eventpage {
-    background-color: oldlace;
+    background-color: rgba(32, 134, 255, 0.3);
     height: 480px;
     overflow: scroll;
     direction: ltr;
@@ -29,7 +56,7 @@
 
 .breadcrumb {
     font-weight: bold;
-    background-color: oldlace;
+    
 }
 
 footer {

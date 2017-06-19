@@ -1,41 +1,47 @@
-
-
 	<div class="homepage-hero-module">
-				<div class="video-container">
-					<div class="filter"></div>
-					<video autoplay loop class="fillWidth">
+		<div class="video-container">
+			<div class="filter"></div>
+			<video autoplay loop class="fillWidth">
 
-						<source src="/video/flow.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+				<source src="/video/flow.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+
+				<source src="/video/flow.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+			</video>
+			<div class="poster hidden">
+				<img src="/video/flow.jpg" alt="">
+			</div>
+
+
+
+
+			<div class="container">
+				<div class="row">
+					<div class="Absolute-Center is-Responsive">
 						
-						<source src="/video/flow.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-					</video>
-					<div class="poster hidden">
-						<img src="/video/flow.jpg" alt="">
-					</div>
-					<div class='row align-items-center'>
-						<div class='col'>
-
-							<div class='col-md-4'>
-								<form action='/auth/login' method='GET' role=form>
-									<button type='submit' class='btn btn-primary btn-block homebtn'>Login</button>
-								</form>
-							</div>
-
-							<div class='col-md-4'>
-							<form action='/events' method='GET' role=form>
-								<button type='submit' class='btn btn-primary btn-block homebtn'> Events</button>
+						<div class="col-sm-12 col-md-12 col-md-offset-1">
+							<h1 id="logo" class="bg-primary text-center animated rubberBand"><strong>EVENTUROUS</strong></h1>
+							<form action='/auth/login' method='GET' role=form>
+								<button type='submit' class='btn btn-primary btn-block homebtn animated flipInY'><strong>LOGIN</strong></button>
 							</form>
-							</div>
 
-							<div class='col-md-4'>
-								<form action='/auth/signup' method='GET' role=form>
-									<button type='submit' class=' btn btn-primary btn-block homebtn'>Sign up</button>
-								</form>
-							</div>
-						</div>
-					
-					</div>
 
+							<br>
+							
+							<form action='/auth/signup' method='GET' role=form>
+								<button type='submit' class=' btn btn-primary btn-block homebtn animated flipInY'><strong>SIGN UP</strong></button>
+							</form>
+							
+							<br>
+
+							<form action='/events' method='GET' role=form>
+								<button type='submit' class='btn btn-primary btn-block homebtn animated flipInX'><strong>VIEW ALL EVENTS</strong></button>
+							</form> 
+							<blockquote class="animated rollIn">
+								<pre class="text-info">Have nothing to do? Look for Events nearby to see what's going on near you!</pre>
+								<pre> Eventurous will populate the map with celebrity sightings, out of the ordinary things and much more!</pre> 
+							</blockquote>
+						</div> 
+					</div>  
 				</div>
 			</div>
 		</div>
@@ -44,8 +50,4 @@
 
 
 
-
-
-
-
-
+	

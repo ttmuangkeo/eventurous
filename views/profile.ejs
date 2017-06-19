@@ -7,7 +7,61 @@
 </ol>
 
 
-<h1 class='text-center'><%=currentUser.firstName%>'s Home  </h1>
+
+
+
+<div class="col-sm-10 col-md-4">
+
+	<!--Card-->
+	<div class="card card-cascade wider">
+
+		<h4 class="card-title text-center"><strong><%=currentUser.firstName%></strong></h4>
+		<!--Card image-->
+		<div class="view overlay hm-white-slight">
+			<img src='https://res.cloudinary.com/ttmuangkeo/image/upload/g_face,c_thumb,w_450,h_300/<%=currentUser.avatar%>.jpg'> 
+			<a href="#!">
+				<div class="mask waves-effect waves-light"></div>
+			</a>
+		</div>
+		<!--/Card image-->
+		<form action="/edit" method="POST" enctype="multipart/form-data">
+			<label class="btn btn-info btn-file">
+				Choose Display Picture <input type="file" name="myFile" class="hidden">
+			</label>
+			<input type="submit" class="btn btn-success btn-md">
+		</form>
+
+		<!--Card content-->
+		<div class="card-block text-center">
+			<!--Title-->
+
+		</div>
+		<!--/.Card content-->
+
+	</div>
+	<!--/.Card-->
+
+</div>
+<div class='col-md-8 eventpage'>
+					<h1 class="text-center">Events</h1>
+					<div class='card'>
+						<%events.forEach(function(events) {%>
+				<img class='card-img-top' src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=events.lat%>,<%=events.lng%>&fov=90&heading=235&pitch=10&initMap" alt="Card image cap">
+
+						<div class='card-block'>
+
+							<h4><%=events.name%></h4>
+							<p><%=events.description%></p>
+							<p><%=events.address%></p>
+
+						</div>
+						<%})%>
+
+					</div>
+				</div>
+
+
+<!-- <h1 class='text-center'><%=currentUser.firstName%>'s Home  </h1>
 
 <div class='container-fluid'>
 	<div class='row'>
@@ -23,8 +77,6 @@
 				<input type="submit" class="btn btn-primary">
 			</form>
 		</div>
-
-
 
 		<div class='container-fluid'>
 			<div class='row'>
@@ -50,7 +102,7 @@
 
 
 
-		
+	-->
 
 
 

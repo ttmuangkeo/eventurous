@@ -7,33 +7,10 @@
 </ol>
 
 <div class='container-fluid'>
-	<div class='row'>
+	<div id="createbg" class='row'>
 		
-		<div class='col-md-3 eventpage'>
-		<h1>Events</h1>
-			<div class='card eventpage'>
-				<%events.forEach(function(events) {%>
-				<img class='card-img-top' src="http://maps.googleapis.com/maps/api/staticmap?center=<%=events.lat%>,<%=events.lng%>&zoom=13&size=200x180" alt="Card image cap">
-				
-				<div class='card-block'>
-
-				<h4><%=events.name%></h4>
-					<p><%=events.description%></p>
-					<p><%=events.address%></p>
-				
-				</div>
-				<%})%>
-			
-			</div>
-		</div>
-		<div class='col-md-6'>
-			<div id='map'></div>
-		</div>
-
-
-
-		<div class='col-md-3 eventpage'>
-			<h1 class='text-center'>create an event</h1>
+		<div class='col-sm-12 col-md-3 eventpage'>
+			<h1 class='text-center'>Create an Event</h1>
 			<form action='/profile' method='POST'>
 				<div class="form-group">
 					<input type="text" class="form-control" name="name" placeholder="Name">
@@ -47,6 +24,31 @@
 				<input type="submit" class="btn btn-primary btn-block">
 			</form>
 		</div>
+
+
+		<div class='col-sm-12 col-md-3 eventpage'>
+		<h1 class="text-center">Events</h1>
+			<div class='card eventpage'>
+				<%events.forEach(function(events) {%>
+				<img class='card-img-top' src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=events.lat%>,<%=events.lng%>&fov=90&heading=235&pitch=10&initMap" alt="Card image cap">
+				
+				<div class='card-block'>
+
+				<h4><%=events.name%></h4>
+					<p><%=events.description%></p>
+					<p><%=events.address%></p>
+				
+				</div>
+				<%})%>
+			
+			</div>
+		</div>
+		<div class='col-sm-12 col-md-6'>
+			<div id="map-container" class="z-depth-1"></div>
+		</div>
+
+
+
 			
 		</div>
 	</div>

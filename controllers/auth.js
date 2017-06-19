@@ -14,9 +14,9 @@ router.get('/login', function(req, res) {
 
 router.post('/login', passport.authenticate('local', {
     successRedirect: '/profile',
-    successFlash: 'Good job, you logged in. Welcome',
+    successFlash: 'Successful Login',
     failureRedirect: '/auth/login',
-    failureFlash: 'try again, bruh.'
+    failureFlash: 'You have entered an invalid email or password. Try again.'
 }));
 
 
@@ -71,9 +71,9 @@ router.get('/facebook', passport.authenticate('facebook', {
 
 router.get('/callback/facebook', passport.authenticate('facebook', {
     successRedirect: '/profile',
-    successFlash: 'you have loggin with facebook',
+    successFlash: 'you have logged in with facebook',
     failureRedirect: '/auth/login',
-    failureFlash: 'you tried, but facebook said no'
+    failureFlash: 'An error has occurred with Facebook'
 }));
 
 

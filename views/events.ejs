@@ -5,15 +5,15 @@
 	<li><a href="/profile">Profile</a></li>
 </ol>
 
-<div class='container-fluid'>
+<div id="createbg" class='container-fluid'>
 	<div class='row-fluid'>
 		
-		<div class='col-md-3'>
+		<div class='col-sm-3 col-md-3'>
 		
 			<div class='card eventpage'>
 				<%events.forEach(function(events) {%>
-				<img class='card-img-top' src="http://maps.googleapis.com/maps/api/staticmap?center=<%=events.lat%>,<%=events.lng%>&zoom=13&size=200x180" alt="Card image cap">
-				
+				<img class='card-img-top' src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=events.lat%>,<%=events.lng%>&fov=90&heading=235&pitch=10&initMap" alt="Card image cap">
+
 				<div class='card-block'>
 
 				<h4><%=events.name%></h4>
@@ -25,18 +25,11 @@
 			
 			</div>
 		</div>
-		<div class='col-md-9'>
-			<div id='map'></div>
+		<div class='col-sm-9 col-md-9'>
+			<div id="map-container" class="z-depth-1"></div>
 		</div>
 	</div>
 </div>
-
-
-
-
-
-
-
 
 
 
