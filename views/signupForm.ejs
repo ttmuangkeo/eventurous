@@ -1,4 +1,4 @@
-<ol class="breadcrumb text-center">
+<!-- <ol class="breadcrumb text-center">
   <li><a href="/">Home</a></li>
   <li><a href="/auth/login">Login</a></li>
   <li><a href="/events">Events</a></li>
@@ -37,3 +37,59 @@
 
 	
 </div>
+ -->
+ <ol class="breadcrumb text-center">
+ 	<li><a href="/">Home</a></li>
+ 	<li><a href="/auth/login">Login</a></li>
+ 	<li><a href="/events">Events</a></li>
+ </ol>
+ <div class="container-fluid">
+ 	<div class="row parallax3">
+ 		<div class="col-md-12">
+ 			<h1 class="text-center title deep-orange-text animated fadeInDown">Eventurous</h1>
+ 		</div>
+ 	</div>
+ </div>
+ <div class="container-fluid black">
+ 	<div class="row">
+ 		<div class="col-md-8 black signup-border">
+ 			<h1 class="text-center signup-title deep-orange-text animated slideInUp"> Let's get started!</h1>
+ 			<h2 class="lead text-center white-text">A perfect <strong class="deep-orange-text">network</strong> for people that are <strong class="deep-orange-text">spontaneous</strong>!</h2>
+
+ 		<div class="list-group text-center">
+ 			<h2 class="list-group-item black-text animated fadeIn">Create and share all the events you create!</h2>
+ 			<br>
+ 			<h2 class="list-group-item black-text animated fadeIn">Discover new events around you!</h2>
+ 			<br>
+ 			<h2 class="list-group-item black-text animated fadeIn">Meet new people that share the same interest as you!</h2>
+ 		</div>
+ 		</div>
+
+ 		<div class="col-md-4">
+ 			<form action="/auth/signup" method="POST" role="form" class="text-center black signup-border">
+ 				<div class='form-group'>
+ 					<label for="login" class="text-fluid text-white">Email</label>
+ 					<input type="text" class='form-control text-center white-text' if='login' name='email' placeholder="Enter your Email">
+ 				</div>
+
+ 				<div class='form-group'>
+ 					<label for="password" class="text-fluid text-white"> Password</label>
+ 					<input type="password" class='form-control text-center white-text' id='password' name='password' placeholder="Enter your Password">
+ 				</div>
+
+ 				<div class='form-group'>
+ 					<label for="firstName" class="text-fluid text-white">First Name</label>
+ 					<input type="text" class='form-control text-center white-text' id='firstName' name='firstName' placeholder="Enter your First Name">
+ 				</div>
+
+ 				<div class='form-group'>
+ 					<label for="lastName" class="text-fluid text-white">Last Name</label>
+ 					<input type="text" class='form-control text-center white-text' id='lastname' name='lastName' placeholder="Enter your Last Name">
+ 				</div>
+
+ 				<button type='submit' class='btn btn-outline-warning'>Submit</button>
+ 				<a href="/auth/facebook" class="btn btn-primary"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
+ 			</form>
+ 		</div>
+ 	</div>
+ </div>

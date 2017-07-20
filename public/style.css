@@ -86,7 +86,16 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+}
+.parallax3 {
+     background-image: url("../image/signupbg.jpg");
+    /* Set a specific height */
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .title {
   font-size: 10em;
@@ -114,6 +123,12 @@ footer {
   position: relative;
   
 }
-.height {
-  height: 500px;
+.signup-title {
+  font-size: 5em;
+  text-shadow: 2px 2px darkred;
 }
+.signup-border {
+  border: 2px solid darkorange;
+  box-shadow: 5px 5px darkred;
+}
+
