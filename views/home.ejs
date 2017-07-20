@@ -1,23 +1,7 @@
-	<div class="homepage-hero-module">
-		<div class="video-container">
-			<div class="filter"></div>
-			<video autoplay loop class="fillWidth">
-
-				<source src="/video/flow.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-
-				<source src="/video/flow.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-			</video>
-			<div class="poster hidden">
-				<img src="/video/flow.jpg" alt="">
-			</div>
-
-
-
-
+<!-- 
 			<div class="container">
 				<div class="row">
-					<div class="Absolute-Center is-Responsive">
-						
+					
 						<div class="col-sm-12 col-md-12 col-md-offset-1">
 							<h1 id="logo" class="bg-primary text-center animated rubberBand"><strong>EVENTUROUS</strong></h1>
 							<form action='/auth/login' method='GET' role=form>
@@ -36,18 +20,69 @@
 							<form action='/events' method='GET' role=form>
 								<button type='submit' class='btn btn-primary btn-block homebtn animated flipInX'><strong>VIEW ALL EVENTS</strong></button>
 							</form> 
-							<blockquote class="animated rollIn">
+							<blockquote class="animated">
 								<pre class="text-info">Have nothing to do? Look for Events nearby to see what's going on near you!</pre>
 								<pre> Eventurous will populate the map with celebrity sightings, out of the ordinary things and much more!</pre> 
 							</blockquote>
 						</div> 
-					</div>  
+					
 				</div>
 			</div>
 		</div>
 	</div>
+ -->
+ <div class="container-fluid">
+ 	<div class="row parallax">
+ 		<div class="col-md-12">
+ 			<h1 class="text-center title animated fadeInDown deep-orange-text"><strong>EVENTUROUS</strong></h1>
+ 		</div>
+ 	</div>
+ </div>
+ 
+ 
 
+ <div class="container-fluid black">
+ 	<div class="row">
+ 		<div class="col-md-6">
+ 			<form action='/auth/login' method='GET' role=form class="text-center">
+ 				<button type='submit' class='btn btn-deep-orange btn-block animated zoomInLeft'><strong class="display2">LOGIN</strong></button>
+ 			</form>
+ 		</div>
+ 		<div class="col-md-6">
+ 			<form action='/auth/signup' method='GET' role=form class="text-center">
+ 				<button type='submit' class='btn btn-deep-orange btn-block animated zoomInRight'><strong class="display2">SIGN UP</strong></button>
+ 			</form>
+ 		</div>
+ 	</div>
+ </div>
 
+<div class="container-fluid black">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="text-center white-text sub-text text-uppercase">Let people in your area know what's happening around them by creating <strong class="deep-orange-text">Events</strong></h1>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+<div class="row">
+	<div class="parallax2"></div>
+</div>
+</div>
+
+ <div class="container-fluid black">
+ 	<div class="row height">
+ 		<div class="col-md-4">
+ 			<h1 class="text-center white-text text-uppercase">Have nothing to do? <br> <hr>Look for <strong class="deep-orange-text">Events</strong> nearby to see what's going on near you!</h1>
+ 		</div>
+ 		<div class="col-md-4">
+ 			<div id="map-container" class="card z-index-1"></div>
+ 		</div>
+ 		<div class="col-md-4">
+ 			<h1 class="text-center white-text text-uppercase"><strong class="deep-orange-text">Eventurous</strong> <br> <hr>will populate the map with celebrity sightings, out of the ordinary activities and much more!</h1> 			
+ 		</div>
+ 	</div>
+ </div>
 
 
 	

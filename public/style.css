@@ -1,4 +1,4 @@
-* {
+/** {
     font-family: 'Kanit', sans-serif;
 }
 .Absolute-Center {
@@ -65,4 +65,55 @@ footer {
     bottom: 0;
     height: 0px;
     clear: both;
+}*/
+.parallax {
+     background-image: url("../image/homebg.jpg");
+    /* Set a specific height */
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax2 {
+  background-image: url("../image/homebg2.jpg");
+    /* Set a specific height */
+    height: 500px;
+    width: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.title {
+  font-size: 10em;
+  margin: 150px;
+  text-shadow: 5px 5px darkred;
+
+  
+}
+.display1 {
+  font-size: 40pt;
+  text-shadow: 5px 10px darkred;
+}
+#map-container {
+  width: 100%;
+  height: 100%;
+  
+}
+.display2 {
+  font-size: 15pt;
+  text-shadow: 5px 5px darkred;
+}
+.sub-text {
+  padding: 150px;
+  font-size: 3em;
+  position: relative;
+  
+}
+.height {
+  height: 500px;
 }
