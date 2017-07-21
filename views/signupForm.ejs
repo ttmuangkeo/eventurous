@@ -1,7 +1,7 @@
- <ol class="breadcrumb text-center">
- 	<li><a href="/">Home</a></li>
- 	<li><a href="/auth/login">Login</a></li>
- 	<li><a href="/events">Events</a></li>
+ <ol class="breadcrumb text-center black">
+ 	<li><a class="white-text" href="/">Home</a></li>
+ 	<li><a class="white-text" href="/auth/login">Login</a></li>
+ 	<li><a class="white-text" href="/events">Events</a></li>
  </ol>
  <div class="container-fluid">
  	<div class="row parallax3">
@@ -13,20 +13,23 @@
  <div class="container-fluid black">
  	<div class="row">
  		<div class="col-md-8 black signup-border">
- 			<h1 class="text-center signup-title deep-orange-text animated slideInUp"> Let's get started!</h1>
+ 			<h1 class="text-center signup-title deep-orange-text animated fadeIn"> Let's get started!</h1>
  			<h2 class="lead text-center white-text">A perfect <strong class="deep-orange-text">network</strong> for people that are <strong class="deep-orange-text">spontaneous</strong>!</h2>
 
- 		<div class="list-group text-center">
+ 		<div class="list-group text-center animated fadeInLeft">
  			<h2 class="list-group-item black-text animated fadeIn">Create and share all the events you create!</h2>
  			<br>
  			<h2 class="list-group-item black-text animated fadeIn">Discover new events around you!</h2>
  			<br>
  			<h2 class="list-group-item black-text animated fadeIn">Meet new people that share the same interest as you!</h2>
+ 			<br>
+ 			<br>
+ 			<h4 class="list-group-item black-text animated fadeIn">Already a member? <br> <a href="/auth/login">Login Here</a></h4>
  		</div>
  		</div>
 
  		<div class="col-md-4">
- 			<form action="/auth/signup" method="POST" role="form" class="text-center black signup-border">
+ 			<form action="/auth/signup" method="POST" role="form" class="text-center black signup-border animated fadeInRight">
  				<div class='form-group'>
  					<label for="login" class="text-fluid text-white">Email</label>
  					<input type="text" class='form-control text-center white-text' if='login' name='email' placeholder="Enter your Email">
@@ -47,7 +50,7 @@
  					<input type="text" class='form-control text-center white-text' id='lastname' name='lastName' placeholder="Enter your Last Name">
  				</div>
 
- 				<button type='submit' class='btn btn-outline-warning'>Submit</button>
+ 				<button type='submit' class='btn btn-outline-warning waves-effect'>Submit</button>
  				<a href="/auth/facebook" class="btn btn-primary"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a>
  			</form>
  		</div>

@@ -1,36 +1,35 @@
-<ol class="breadcrumb text-center">
-  <li><a href="/">Home</a></li>
-  <li><a href="/auth/signup">Sign Up</a></li>
-  <li><a href="/events">Events</a></li>
+<ol class="breadcrumb text-center black">
+	<li><a class="white-text" href="/">Home</a></li>
+	<li><a class="white-text" href="/auth/signup">Sign Up</a></li>
+	<li><a class="white-text" href="/events">Events</a></li>
 </ol>
-
-
-
-<h1 class='text-center'> Welcome back!</h1>
-<div class='container'>
-<div class='row'>
-<div class='col-md-12'>
-
-	<form action="/auth/login" method="POST" role="form">
-		
-
-		<div class="form-group text-center">
-			<label for="login">Email</label>
-			<input type="text" class="form-control" id="login" name="email" placeholder="type your email">
+<div class="container-fluid black">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="parallax3">
+				<h1 class="login-title sub-text deep-orange-text text-center animated slideInDown"><strong>Eventurous</strong></h1>
+				<hr class="signup-border animated slideInLeft">
+				<h2 class="login-title sub-text deep-orange-text text-center animated fadeInUp"><strong>Welcome Back!</strong></h2>
+				<br>
+			</div>
 		</div>
+		<div class="col-md-6 text-center">
+			<form action="/auth/login" method="POST" role="form" class="card sub-text black animated zoomIn">
+				<div class="form-group text-center">
+					<label for="login" class="text-fluid white-text">Email</label>
+					<input type="text" class="form-control text-center white-text" id="login" name="email" placeholder="Enter You Email">
+				</div>
+				<div class="form-group text-center">
+					<label for="password" class="text-fluid white-text">Password</label>
+					<input type="password" class="form-control text-center white-text" id="password" placeholder="Enter Your Password">
+				</div>
+				<hr>
+				<button type="submit" class="btn btn-outline-warning">Login</button>
+				<a href="/auth/facebook" class="btn btn-primary"><i class="fa fa-facebook-official text-center" aria-hidden="true"></i> Facebook</a>
+				<hr>
+				<h2 class="deep-orange-text text-center animated fadeInUp"><strong>Not a Member? <br> <a href="/auth/signup">Sign Up Now!</a></strong></h2>
 
-
-		<div class="form-group text-center">
-			<label for="password">Password</label>
-			<input type="password" class="form-control" id="password" name="password" placeholder="type your password">
+			</form>
 		</div>
-		
-	<button type="submit" class="btn btn-primary">Submit</button>
-	<a href="/auth/facebook" class="btn btn-primary"><i class="fa fa-facebook left"></i>Login with Facebook</a>
-	
-	</form>
-
-
-	</div>
 	</div>
 </div>
