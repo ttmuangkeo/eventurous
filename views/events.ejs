@@ -8,7 +8,7 @@
 <div id="createbg" class='container-fluid'>
 	<div class='row-fluid'>
 		
-		<div class='col-sm-3 col-md-3'>
+		<div class='col-sm-3 col-md-1'>
 		
 			<div class='card eventpage'>
 				<%events.forEach(function(events) {%>
@@ -25,7 +25,7 @@
 			
 			</div>
 		</div>
-		<div class='col-sm-9 col-md-9'>
+		<div class='col-sm-9 col-md-11'>
 			<div id="map-container" class="z-depth-1"></div>
 		</div>
 	</div>
@@ -37,10 +37,7 @@
 	var markers = <%-JSON.stringify(events) %>
 </script>
 
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr2pTOmH22vv8f6gv_zyPqPMgDLSet9k4&callback=initMap"
->
-</script>
+<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr2pTOmH22vv8f6gv_zyPqPMgDLSet9k4&callback=initMap">
+</script> -->
 
 <script src="/script.js"></script>
-<link rel="stylesheet" href="/style">

@@ -43,8 +43,12 @@
 			
 			</div>
 		</div>
-		<div class='col-sm-12 col-md-6'>
-			<div id="map-container" class="z-depth-1"></div>
+
+		<div class="container">
+		<div class="row">
+		<div class='col-md-12'>
+		</div>
+		</div>
 		</div>
 
 
@@ -54,13 +58,14 @@
 	</div>
 </div>
 
+			<div id="map-container card" class="z-depth-1"></div>
 
 		<script>
 			var markers = <%-JSON.stringify(events) %>
 		</script>
 
-		<script async defer
+<!-- 	<script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr2pTOmH22vv8f6gv_zyPqPMgDLSet9k4&callback=initMap">
 	</script>
-
+ -->
 	<script src="/script.js"></script>
