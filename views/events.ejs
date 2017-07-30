@@ -1,43 +1,29 @@
-<ol class="breadcrumb text-center">
+
+ <ol class="breadcrumb text-center black">
 	<li><a href="/">Home</a></li>
-	<li><a href="/createevent">Create Event</a></li>
-	<li><a href="/events">Events</a></li>
-	<li><a href="/profile">Profile</a></li>
+	<li><a class="white-text" href="/createevent">Create Event</a></li>
+	<li><a class="white-text" href="/events">Events</a></li>
+	<li><a class="white-text" href="/profile">Profile</a></li>
 </ol>
 
-<div id="createbg" class='container-fluid'>
-	<div class='row-fluid'>
-		
-		<div class='col-sm-3 col-md-1'>
-		
-			<div class='card eventpage'>
-				<%events.forEach(function(events) {%>
-				<img class='card-img-top' src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=events.lat%>,<%=events.lng%>&fov=90&heading=235&pitch=10&initMap" alt="Card image cap">
-
-				<div class='card-block'>
-
-				<h4><%=events.name%></h4>
-					<p><%=events.description%></p>
-					<p><%=events.address%></p>
-				
-				</div>
-				<%})%>
-			
-			</div>
+<div class="black">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-8">
+			<div id="map-container" class="card"></div>
 		</div>
-		<div class='col-sm-9 col-md-11'>
-			<div id="map-container" class="z-depth-1"></div>
+		<div class="col-md-4">
+			<div class="overflow card">
+				<%events.forEach(function(events) {%>
+				<img class='img-responsive' src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=events.lat%>,<%=events.lng%>&fov=90&heading=235&pitch=10&initMap" alt="Card image cap">
+				<hr>
+				<h2><%= events.name%></h2>
+				<p><%= events.description%></p>
+				<p><%= events.address%></p>
+			<%})%>
+			</div>
 		</div>
 	</div>
 </div>
-
-
-
-<script>
-	var markers = <%-JSON.stringify(events) %>
-</script>
-
-<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr2pTOmH22vv8f6gv_zyPqPMgDLSet9k4&callback=initMap">
-</script> -->
-
-<script src="/script.js"></script>
+</div>
+<script>var markers = <%- JSON.stringify(events) %> </script>

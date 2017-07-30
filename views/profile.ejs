@@ -1,108 +1,37 @@
-<ol class="breadcrumb text-center">
+<ol class="breadcrumb text-center black">
 	<li><a href="/">Home</a></li>
 	<li><a href="/createevent">Create Event</a></li>
 	<li><a href="/events">Events</a></li>
 	<li><a href="/profile">Profile</a></li>
 	<li><a href="/auth/logout">log out</a></li>
 </ol>
+<div class="black">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 signup-border">
+				<h1 class="card-block"> <span class="deep-orange-text"><%= currentUser.firstName%> <%= currentUser.lastName%></span></h1>
+				<% if(currentUser.avatar != null) {%>
+				<img class="img-responsive" src='https://res.cloudinary.com/ttmuangkeo/image/upload/g_face,c_thumb,w_300,h_300/<%=currentUser.avatar%>.jpg' alt="">
+				<% } else{ %>
+				<img class="img-responsive" src="/image/avatar.png" alt="">
+				<%}%>
 
-
-
-
-
-<div class="col-sm-10 col-md-4">
-
-	<!--Card-->
-	<div class="card card-cascade wider">
-
-		<h4 class="card-title text-center"><strong><%=currentUser.firstName%></strong></h4>
-		<!--Card image-->
-		<div class="view overlay hm-white-slight">
-			<img src='https://res.cloudinary.com/ttmuangkeo/image/upload/g_face,c_thumb,w_450,h_300/<%=currentUser.avatar%>.jpg'> 
-			<a href="#!">
-				<div class="mask waves-effect waves-light"></div>
-			</a>
-		</div>
-		<!--/Card image-->
-		<form action="/edit" method="POST" enctype="multipart/form-data">
-			<label class="btn btn-info btn-file">
-				Choose Display Picture <input type="file" name="myFile" class="hidden">
-			</label>
-			<input type="submit" class="btn btn-success btn-md">
-		</form>
-
-		<!--Card content-->
-		<div class="card-block text-center">
-			<!--Title-->
-
-		</div>
-		<!--/.Card content-->
-
-	</div>
-	<!--/.Card-->
-
-</div>
-<div class='col-md-8 eventpage'>
-					<h1 class="text-center">Events</h1>
-					<div class='card'>
-						<%events.forEach(function(events) {%>
-				<img class='card-img-top' src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=events.lat%>,<%=events.lng%>&fov=90&heading=235&pitch=10&initMap" alt="Card image cap">
-
-						<div class='card-block'>
-
-							<h4><%=events.name%></h4>
-							<p><%=events.description%></p>
-							<p><%=events.address%></p>
-
-						</div>
-						<%})%>
-
-					</div>
-				</div>
-
-
-<!-- <h1 class='text-center'><%=currentUser.firstName%>'s Home  </h1>
-
-<div class='container-fluid'>
-	<div class='row'>
-		<div class='col-md-3'>
-			<h4><%=currentUser.firstName%>'s Bio</h4>
-			<img src='https://res.cloudinary.com/ttmuangkeo/image/upload/g_face,c_thumb,w_150,h_150/<%=currentUser.avatar%>.jpg' alt="">
-
-
-			<form action="/edit" method="POST" enctype="multipart/form-data">
-				<label class="btn btn-default btn-file">
-					Choose Display Picture <input type="file" name="myFile" class="hidden">
-				</label>
-				<input type="submit" class="btn btn-primary">
-			</form>
-		</div>
-
-		<div class='container-fluid'>
-			<div class='row'>
-				<div class='col-md-3 eventpage'>
-					<h1>Events</h1>
-					<div class='card carousel-item'>
-						<%events.forEach(function(events) {%>
-						<img class='card-img-top' src="http://maps.googleapis.com/maps/api/staticmap?center=<%=events.lat%>,<%=events.lng%>&zoom=13&size=200x180">
-
-						<div class='card-block'>
-
-							<h4><%=events.name%></h4>
-							<p><%=events.description%></p>
-							<p><%=events.address%></p>
-
-						</div>
-						<%})%>
-
-					</div>
+				<form action="/edit" method="POST" enctype="multipart/form-data">
+					<label class="btn btn-primary btn-block btn-file"><strong>Choose a Profile Picture </strong><input type="file" name="myFile" class="hidden">
+					</label>
+					<button type='submit' class='btn btn-deep-orange btn-block'><strong class="display2">Submit</strong></button>
+				</form>
+			</div>
+			<div class="col-md-8 overflow signup-border">
+			<div class="card-block">
+					<%events.forEach(function(events) {%>
+					<img class='img-responsive' src="https://maps.googleapis.com/maps/api/streetview?size=400x400&location=<%=events.lat%>,<%=events.lng%>&fov=90&heading=235&pitch=10&initMap" alt="Card image cap">
+					<h1 class="deep-orange-text"><%=events.name%></h1>
+					<h3 class="white-text"><%=events.description%></h3>
+					<h3 class="white-text"><%=events.address%></h3>
+					<%})%>
 				</div>
 			</div>
 		</div>
-
-
-
-	-->
-
-
-
+	</div>
+</div>

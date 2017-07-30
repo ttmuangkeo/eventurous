@@ -2,7 +2,7 @@
 var initMap = function() {
 
     var map = new google.maps.Map(document.getElementById('map-container'), {
-        center: { lat: -34.397, lng: 150.644 },
+        center: { lat: 47.6, lng: -122.344 },
         zoom: 10,
         styles: [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -120,28 +120,28 @@ var initMap = function() {
 
 }
 
-// $('.edit-form').submit(function(e) {
-//     e.preventDefault();
-//     var url = $(this).attr('action');
-//     var data = $(this).serialize();
+$('.edit-form').submit(function(e) {
+    e.preventDefault();
+    var url = $(this).attr('action');
+    var data = $(this).serialize();
 
-//     $.ajax({
-//         url: url,
-//         method: 'PUT',
-//         data: data
-//     }).done(function() {
-//         window.location.href = '/profile';
-//     });
-// });
+    $.ajax({
+        url: url,
+        method: 'PUT',
+        data: data
+    }).done(function() {
+        window.location.href = '/profile';
+    });
+});
 
-// $('.delete-btn').click(function(e) {
-//     e.preventDefault();
-//     var url = $(this).attr('href');
+$('.delete-btn').click(function(e) {
+    e.preventDefault();
+    var url = $(this).attr('href');
 
-//     $.ajax({
-//         url: url,
-//         method: 'DELETE'
-//     }).done(function() {
-//         window.location.href = '/profile';
-//     });
-// });
+    $.ajax({
+        url: url,
+        method: 'DELETE'
+    }).done(function() {
+        window.location.href = '/profile';
+    });
+});
